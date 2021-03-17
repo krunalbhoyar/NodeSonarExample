@@ -1,0 +1,6 @@
+projectKey=NodeSonarExample
+serverUrl=http://20.20.4.41:9000
+serverVersion=7.1.0.11001
+dashboardUrl=http://20.20.4.41:9000/dashboard/index/NodeSonarExample
+ceTaskId=AXg__pRE-9c23qs-Pg9q
+ceTaskUrl=http://20.20.4.41:9000/api/ce/task?id=AXg__pRE-9c23qs-Pg9q
