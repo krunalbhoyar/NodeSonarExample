@@ -9,4 +9,12 @@ node{
             sh 'npm run test'
 	    sh 'sudo npm run sonar'
     }
+    stage('OWASP Dependency Check') {
+         
+          sh 'rm owasp* || true'
+          sh 'wget "https://raw.githubusercontent.com/krunalbhoyar/sonarqubetest/master/owasp-dependency-check.sh" '
+          sh 'chmod +x owasp-dependency-check.sh'
+          
+          sh 'bash owasp-dependency-check.sh'
+     }
 }
