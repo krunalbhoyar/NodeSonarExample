@@ -31,5 +31,8 @@
     "reportPath": "coverage",
     "reportFile": "test-reporter.xml",
     "indent": 4
-  }
+  },
+  "scripts" : {
+    "verify": "sonarqube-gate-check"
+}
 }
