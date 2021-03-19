@@ -15,7 +15,7 @@ node{
             -D sonar.login=admin\
             -D sonar.password=admin \
 	    -D sonar.projectKey=NodeSonarExample \
-	    -D sonar.source=src "
+	    -D sonar.sources=src "
 	    
     }
     }
