@@ -1,4 +1,4 @@
-/*const request =  require('supertest')
+const request =  require('supertest')
 const server =  require('../index')
 describe('Get Endpoints', () => {
     it('Get', async (done) => {
@@ -18,4 +18,4 @@ afterAll(async  done  => {
     server.close();
     done();
 });
-*/
+
