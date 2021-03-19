@@ -9,7 +9,7 @@ node{
             sh 'npm run test'
 	    //sh 'sudo npm run sonar'
 	    withSonarQubeEnv('sonarqube') {
-                    sh '-B -X sonar:sonar'
+                    sh '-X sonar:sonar'
                     }
     }
     stage("Quality gate") {
