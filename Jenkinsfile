@@ -10,7 +10,7 @@ node{
 	    //sh 'sudo npm run sonar'
 	    def scannerhome = tool 'sonarqube';
         withSonarQubeEnv('sonarqube') {
-            
+            sh 'npm run test'
             sh "${scannerhome}/bin/sonar-scanner \
             -D sonar.login=admin\
             -D sonar.password=admin \
