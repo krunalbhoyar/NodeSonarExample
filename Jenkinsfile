@@ -13,7 +13,9 @@ node{
             
             sh "${scannerhome}/bin/sonar-scanner \
             -D sonar.login=admin\
-            -D sonar.password=admin"
+            -D sonar.password=admin \
+	    -D sonar.projectKey=NodeSonarExample \
+	    -D sonar.source=src "
 	    
     }
     }
