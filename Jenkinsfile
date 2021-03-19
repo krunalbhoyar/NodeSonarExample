@@ -9,7 +9,9 @@ node{
             sh 'npm run test'
 	    sh 'sudo npm run sonar'
     }
-    
+    stage("Quality gate") {
+       waitForQualityGate abortPipeline: true
+    }
 	
 	
 	
