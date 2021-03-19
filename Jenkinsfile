@@ -4,12 +4,12 @@ node{
     }
 
     stage ('sonarqube analysis') {
-            sh 'npm install -- save express jest' 
-	    sh 'npm install -D sonarqube-scanner jest-sonar-reporter supertest' 
+            //sh 'npm install -- save express jest' 
+	    //sh 'npm install -D sonarqube-scanner jest-sonar-reporter supertest' 
             sh 'npm run test'
 	    //sh 'sudo npm run sonar'
 	    withSonarQubeEnv('sonarqube') {
-                    sh '-X sonar:sonar'
+                    sh 'sonar:sonar'
                     }
     }
     stage("Quality gate") {
