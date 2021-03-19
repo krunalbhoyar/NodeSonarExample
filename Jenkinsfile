@@ -4,15 +4,11 @@ node{
     }
 
     stage ('sonarqube analysis') {
-            //sh 'npm install -- save express jest' 
-	    //sh 'npm install -D sonarqube-scanner jest-sonar-reporter supertest' 
+            sh 'npm install -- save express jest' 
+	    sh 'npm install -D sonarqube-scanner jest-sonar-reporter supertest' 
             sh 'npm run test'
-	    //sh 'sudo npm run sonar'
-	    withSonarQubeEnv('sonarqube') {
-                sh "${scannerhome}/bin/sonar-scanner \
-            	-D sonar.login=admin\
-            	-D sonar.password=admin"
-                    }
+	    sh 'sudo npm run sonar'
+	    
     }
     stage("Quality gate") {
        waitForQualityGate abortPipeline: true
