@@ -16,6 +16,7 @@ node{
             -D sonar.password=admin"
 	    
     }
+    }
     stage("Quality gate") {
        waitForQualityGate abortPipeline: true
     }
