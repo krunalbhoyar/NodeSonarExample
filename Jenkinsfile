@@ -20,12 +20,9 @@ node{
 	    //-D sonar.sources=src "
 	    
     }
-    }
-    stage("Quality gate") {
-      // timeout(time: 1, unit: 'HOURS') {
-               // waitForQualityGate abortPipeline: true
-             // }
-   def tries = 0
+     
+	
+def tries = 0
   sonarResultStatus = "PENDING"
   while ((sonarResultStatus == "PENDING" || sonarResultStatus == "IN_PROGRESS") && tries++ < 5) {
       try {
@@ -39,10 +36,9 @@ node{
   if (sonarResultStatus != 'OK') {
       error "Quality gate failure for SonarQube: ${sonarResultStatus}"
   }
-	}
 
-	
-	
+    }
+
 	
     stage('OWASP Dependency Check') {
          
