@@ -10,7 +10,7 @@ node{
 	    
 	    //def scannerhome = tool 'sonarqube';
         withSonarQubeEnv('sonarqube') {
-	   // sh 'npm run test'
+	    sh 'npm run test'
 	    sh 'sudo npm run sonar'
             //sh 'npm run test'
             //sh "${scannerhome}/bin/sonar-scanner \
