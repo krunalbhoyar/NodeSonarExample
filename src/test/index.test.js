@@ -8,7 +8,7 @@ describe('Get Endpoints', () => {
             userId:  1,
             title:  'test is cool',
         });
-        expect(res.statusCode).toEqual(200);
+        expect(res.statusCode).toEqual(400);
         expect(res.body).toHaveProperty('nome');
         done();
     })
