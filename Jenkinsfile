@@ -37,7 +37,7 @@ def tries = 0
       error "Quality gate failure for SonarQube: ${sonarResultStatus}"
   }
 
-    
+    }
 
 	
     stage('OWASP Dependency Check') {
