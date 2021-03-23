@@ -45,7 +45,7 @@ def tries = 0
           sh 'rm owasp* || true'
           sh 'wget "https://raw.githubusercontent.com/krunalbhoyar/sonarqubetest/master/owasp-dependency-check.sh" '
           sh 'chmod +x owasp-dependency-check.sh'
-          sh 'sudo chmod 777 odc-reports'
+          //sh 'sudo chmod 777 odc-reports'
           sh 'bash owasp-dependency-check.sh'
      }
 }
