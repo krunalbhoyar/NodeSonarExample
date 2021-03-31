@@ -10,22 +10,18 @@ node{
 	    
 	    //def scannerhome = tool 'sonarqube';
         withSonarQubeEnv('sonarqube') {
+	    sh 'echo "==========Running Test Cases==========="'
 	    sh 'npm run test'
+            sh 'echo "==============Scanning code coverage================="'
 	    sh 'sudo npm run sonar'
-            //sh 'npm run test'
-            //sh "${scannerhome}/bin/sonar-scanner \
-            //-D sonar.login=admin\
-            //-D sonar.password=admin \
-	    //-D sonar.projectKey=NodeSonarExample \
-	    //-D sonar.sources=src "
 	    
     }
     }
-    stage("Quality gate") {
-       timeout(time: 1, unit: 'HOURS') {
-                waitForQualityGate abortPipeline: true
-              }
-	}
+    //stage("Quality gate") {
+       //timeout(time: 1, unit: 'HOURS') {
+                //waitForQualityGate abortPipeline: true
+              //}
+	//}
 	
 	
 	
