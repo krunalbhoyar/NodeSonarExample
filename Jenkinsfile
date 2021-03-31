@@ -32,6 +32,7 @@ node{
           sh 'chmod +x owasp-dependency-check.sh'
           sh 'sudo chmod 777 odc-reports'
           sh 'bash owasp-dependency-check.sh'
+          archive (includes: 'odc-reports/*html)
      }
 }
 
